@@ -6,7 +6,9 @@ This cache backend requires the pytyrant Python client library for communicating
 
 Tokyo Tyrant is the de facto database server for Tokyo Cabinet written and maintained by the same author. It supports a REST HTTP protocol, memcached, and its own simple binary protocol.
 
+
 Usage
+
 Run python setup.py install to install, or place django-tyrant-cache on your Python path.
 
 Modify your Django settings to use django-tyrant-cache
