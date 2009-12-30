@@ -32,7 +32,7 @@ setup(
     classifiers=CLASSIFIERS,
     author="Anatoly Vostryakov",
     author_email="a.vostrjakov@gmail.com",
-    url="",
+    url="http://github.com/avostryakov/django-tyrant-cache",
     license="MIT License",
     py_modules=['tyrant_cache'],
     platforms=['any'],

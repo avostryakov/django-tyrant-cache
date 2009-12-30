@@ -62,8 +62,7 @@ class CacheClass(BaseCache):
         "Atomically increment ``key`` by ``delta``."
         return self._cache.addint(self._prepare_key(key), delta)
         
-# TODO it is crashed program
+# TODO it is crashed a program
 #    def close(self, **kwargs):
 #        "Disconnect from the cache."
 #        self._cache.close()
-
