@@ -1,2 +1,2 @@
-django-tyrant-cache is a alternative cache backend instead of memcached
+django-tyrant-cache is a alternative cache backend for Django. 
 
