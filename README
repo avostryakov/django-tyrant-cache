@@ -1,6 +1,6 @@
 django-tyrant-cache is a alternative cache backend for Django. 
 
-This cache backend was inspired by django-tokyo-persistent-store (http://github.com/thejefflarson/django-tokyo-persistent-store)  and django-redis-cache (http://github.com/sebleier/django-redis-cache)
+This cache backend was inspired by django-tokyo-persistent-store ( http://github.com/thejefflarson/django-tokyo-persistent-store )  and django-redis-cache ( http://github.com/sebleier/django-redis-cache )
 
 This cache backend requires the pytyrant Python client library for communicating with the Tokyo Tyrant server.
 
