@@ -15,10 +15,10 @@ class CacheClass(BaseCache):
         BaseCache.__init__(self, params)
         host, port = server.split(':')
         self._cache = pytyrant.Tyrant.open(host, int(port))
-        
+
     def _prepare_key(self, raw_key):
         return smart_str(raw_key)
-        
+
     def add(self, key, value, timeout=0):
         "Add a value to the cache. Returns ``True`` if the object was added, ``False`` if not."
         try:
@@ -39,7 +39,7 @@ class CacheClass(BaseCache):
             return smart_unicode(value)
         else:
             return value
-        
+
     def set(self, key, value, timeout=0):
         "Persist a value to the cache."
         value = pickle.dumps(value)
@@ -48,8 +48,11 @@ class CacheClass(BaseCache):
 
     def delete(self, key):
         "Remove a key from the cache."
-        self._cache.out(self._prepare_key(key))
-        
+        try:
+            self._cache.out(self._prepare_key(key))
+        except pytyrant.TyrantError: #Should not raise error if key doesn't exist
+            return None
+
     def get_many(self, keys):
         "Retrieve many keys."
         many = self._cache.mget(keys)
